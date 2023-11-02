@@ -1,0 +1,14 @@
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\bin\Debug\net7.0\Ferreteria.exe
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\bin\Debug\net7.0\Ferreteria.deps.json
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\bin\Debug\net7.0\Ferreteria.runtimeconfig.json
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\bin\Debug\net7.0\Ferreteria.dll
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\bin\Debug\net7.0\Ferreteria.pdb
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.AssemblyInfoInputs.cache
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.AssemblyInfo.cs
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.csproj.CoreCompileInputs.cache
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.dll
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\refint\Ferreteria.dll
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.pdb
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.genruntimeconfig.cache
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\ref\Ferreteria.dll
