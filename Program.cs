@@ -54,11 +54,7 @@ internal class Program
                     break;
                 case "6":
                     Console.Clear();
-                    Console.WriteLine("╔═════════════════════════════════════════╗");
-                    Console.WriteLine("║    El valor del inventario actual es:   ║");
-                    Console.WriteLine("╠═════════════════════════════════════════╣");
-                    Console.WriteLine($"║ ${querys.Inventario()}".PadRight(30)+"║".PadLeft(13));
-                    Console.WriteLine("╚═════════════════════════════════════════╝");
+                    querys.Inventario();
                     break;
                 case "7":
                     Console.Clear();

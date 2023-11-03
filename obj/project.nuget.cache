@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OWoqbYPHNVbSIvy2/pzrY1Q1jpZTKxJFgG1jrp8bP3aQpuVaZEpPXi20OOSuacsvzdYzVKJpn723oUQ2RFoQCg==",
+  "dgSpecHash": "T5wlnrcD6zQMt4K6sHbvptTAGcpZTaNXblQbWn0uCYyOjLi5JxaRkqJAKcTzxIeZ5Cgu3Yy0RA2v6T3qrsHIgg==",
   "success": true,
   "projectFilePath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\APM02-40\\.nuget\\packages\\betterconsoletables\\1.1.3\\betterconsoletables.1.1.3.nupkg.sha512"
+  ],
   "logs": []
 }

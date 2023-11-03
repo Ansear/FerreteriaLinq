@@ -40,3 +40,6 @@ C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\refint\Ferr
 C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.pdb
 C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.genruntimeconfig.cache
 C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\ref\Ferreteria.dll
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\bin\Debug\net7.0\BetterConsoleTables.dll
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.csproj.AssemblyReference.cache
+C:\Users\APM02-40\Documents\LINQ\Ferreteria\obj\Debug\net7.0\Ferreteria.csproj.CopyComplete

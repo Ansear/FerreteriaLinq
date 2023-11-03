@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BetterConsoleTables;
 using Ferreteria.Data;
 using Ferreteria.Entities;
 
@@ -10,18 +11,17 @@ using Ferreteria.Entities;
 namespace Ferreteria.Querys;
 public class Querys
 {
-    static DataEntity _data = new ();
+    static DataEntity _data = new();
     static List<Productos> _productos = _data._productos;
     static List<Factura> _factura = _data._factura;
     static List<DetalleFactura> _detalleFactura = _data._detalleFactura;
     public void Count()
     {
         var count = (from p in _productos select new { p.Nombre, p.PrecioUnt, p.Cantidad }).ToList();
-            Console.WriteLine("╔══════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║                            Productos                             ║");
-            Console.WriteLine("╠══════════════════════════════════════════════════════════════════╣");
-            count.ForEach(p => Console.WriteLine($"║Nombre: {p.Nombre}".PadRight(30) + $"Cantidad: {p.Cantidad}".PadRight(18) +$"Precio c/u: ${p.PrecioUnt}║".PadLeft(20)));
-            Console.WriteLine("╚══════════════════════════════════════════════════════════════════╝");
+        var table = new Table("Nombre", "Cantidad", "Precio c/u");
+        count.ForEach(p => table.AddRow(p.Nombre, p.Cantidad, $"${p.PrecioUnt}"));
+        table.Config = TableConfiguration.UnicodeAlt();
+        Console.WriteLine(table.ToString());
     }
 
     public void ProductoMin()
@@ -31,11 +31,10 @@ public class Querys
             Console.WriteLine("Todos los productos estan bien");
         else
         {
-            Console.WriteLine("╔═════════════════════════════════════════╗");
-            Console.WriteLine("║               Productos                 ║");
-            Console.WriteLine("╠═════════════════════════════════════════╣");
-            products.ForEach(p => Console.WriteLine($"║{p.Nombre}                          ║"));
-            Console.WriteLine("╚═════════════════════════════════════════╝");
+            var table = new Table("Nombre Producto");
+            products.ForEach(p => table.AddRow(p.Nombre));
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
     }
 
@@ -47,15 +46,11 @@ public class Querys
             Console.WriteLine("No hay productos para comprar");
         else
         {
-            var producto = from p in productos select new { p.Nombre, p.Cantidad, p.StockMax };
-            Console.WriteLine("╔═══════════════════════════════════════════╗");
-            Console.WriteLine("║            Productos a Comprar            ║");
-            Console.WriteLine("╠═══════════════════════════════════════════╣");
-            foreach (var item in producto)
-            {
-                Console.WriteLine($"║ Producto:{item.Nombre} -- Cantidad:{item.StockMax - item.Cantidad}   ║");
-            }
-            Console.WriteLine("╚═══════════════════════════════════════════╝");
+            var producto = (from p in productos select new { p.Nombre, p.Cantidad, p.StockMax }).ToList();
+            var table = new Table("Nombre Producto", "Cantidad a Comprar");
+            producto.ForEach(p => table.AddRow(p.Nombre, p.Cantidad));
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
     }
 
@@ -67,13 +62,13 @@ public class Querys
             Console.WriteLine("No hay facturas del mes de enero");
         else
         {
-            Console.WriteLine("╔═════════════════════════════════════════════════╗");
-            Console.WriteLine("║                      Facturas                   ║");
-            Console.WriteLine("╠═════════════════════════════════════════════════╣");
-            facturas.ForEach(f => Console.WriteLine($"║NumFactura:{f.NroFactura} -- Fecha:{f.Fecha} -- IdCliente:{f.IdCliente}  ║"));
-            Console.WriteLine("╠═════════════════════════════════════════════════╣");
-            Console.WriteLine($"║Total Facturas: {facturas.Count()}                                ║");
-            Console.WriteLine("╚═════════════════════════════════════════════════╝");
+            var table = new Table("Nro Facturas", "Fecha Factura", "IdCliente");
+            facturas.ForEach(p => table.AddRow(p.NroFactura, p.Fecha, p.IdCliente));
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
+            Console.WriteLine("╔════════════════════╗");
+            Console.WriteLine($"║Total Facturas: {facturas.Count()}   ║");
+            Console.WriteLine("╚════════════════════╝");
         }
     }
 
@@ -94,24 +89,22 @@ public class Querys
                 {
                     nombre = p.Nombre
                 }).ToList();
-            Console.WriteLine("╔═════════════════════════════════════════╗");
-            Console.WriteLine("║               Productos                 ║");
-            Console.WriteLine("╠═════════════════════════════════════════╣");
-            resul.ForEach(p => Console.WriteLine($"║- {p.nombre}".PadRight(30)+"║".PadLeft(13)));
-            Console.WriteLine("╚═════════════════════════════════════════╝");
-            
+            var table = new Table("Nombre Producto");
+            resul.ForEach(p => table.AddRow(p.nombre));
+            table.Config = TableConfiguration.UnicodeAlt();
+            Console.WriteLine(table.ToString());
         }
     }
 
-    public double Inventario()
+    public void Inventario()
     {
         var total = (from s in _productos select new { s.PrecioUnt, s.Cantidad }).ToList();
         double contTotal = 0;
-        foreach (var item in total)
-        {
-            contTotal += item.PrecioUnt * item.Cantidad;
-        }
-        return contTotal;
+        total.ForEach(x => contTotal += x.PrecioUnt * x.Cantidad);
+        var table = new Table("El valor del inventario actual");
+        table.AddRow($"${contTotal}");
+        table.Config = TableConfiguration.UnicodeAlt();
+        Console.WriteLine(table.ToString());
     }
 
 }

@@ -1,11 +1,39 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "BetterConsoleTables/1.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/BetterConsoleTables.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/BetterConsoleTables.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BetterConsoleTables/1.1.3": {
+      "sha512": "ILweE/pGE7gK2v+5+PaddZtvAaa+1p8QSAgR3JhnU3rMD0F7KS8paRCwJsVhWC6qb//Va4jryV2vU28+MJzmhA==",
+      "type": "package",
+      "path": "betterconsoletables/1.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "betterconsoletables.1.1.3.nupkg.sha512",
+        "betterconsoletables.nuspec",
+        "lib/net471/BetterConsoleTables.dll",
+        "lib/net5.0/BetterConsoleTables.dll",
+        "lib/netstandard1.3/BetterConsoleTables.dll",
+        "lib/netstandard2.0/BetterConsoleTables.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "BetterConsoleTables >= 1.1.3"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\APM02-40\\.nuget\\packages\\": {}
@@ -13,11 +41,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
+      "projectUniqueName": "c:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
       "projectName": "Ferreteria",
-      "projectPath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
+      "projectPath": "c:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
       "packagesPath": "C:\\Users\\APM02-40\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\obj\\",
+      "outputPath": "c:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\APM02-40\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +71,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "BetterConsoleTables": {
+            "target": "Package",
+            "version": "[1.1.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
