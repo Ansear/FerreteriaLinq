@@ -17,11 +17,11 @@ public class Querys
     public void Count()
     {
         var count = (from p in _productos select new { p.Nombre, p.PrecioUnt, p.Cantidad }).ToList();
-            Console.WriteLine("╔════════════════════════════════════════════════════════╗");
-            Console.WriteLine("║                   Productos                            ║");
-            Console.WriteLine("╚════════════════════════════════════════════════════════╝");
-            count.ForEach(p => Console.Write($"║Nombre: {p.Nombre}".PadRight(25) + $"Cantidad: {p.Cantidad}".PadRight(15) +$"Precio c/u: {p.PrecioUnt}║\n"));
-            Console.WriteLine("╚════════════════════════════════════════════════════════╝");
+            Console.WriteLine("╔══════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║                            Productos                             ║");
+            Console.WriteLine("╠══════════════════════════════════════════════════════════════════╣");
+            count.ForEach(p => Console.WriteLine($"║Nombre: {p.Nombre}".PadRight(30) + $"Cantidad: {p.Cantidad}".PadRight(18) +$"Precio c/u: ${p.PrecioUnt}║".PadLeft(20)));
+            Console.WriteLine("╚══════════════════════════════════════════════════════════════════╝");
     }
 
     public void ProductoMin()
@@ -31,7 +31,11 @@ public class Querys
             Console.WriteLine("Todos los productos estan bien");
         else
         {
-            products.ForEach(p => Console.WriteLine($"Producto: {p.Nombre}"));
+            Console.WriteLine("╔═════════════════════════════════════════╗");
+            Console.WriteLine("║               Productos                 ║");
+            Console.WriteLine("╠═════════════════════════════════════════╣");
+            products.ForEach(p => Console.WriteLine($"║{p.Nombre}                          ║"));
+            Console.WriteLine("╚═════════════════════════════════════════╝");
         }
     }
 
@@ -44,11 +48,14 @@ public class Querys
         else
         {
             var producto = from p in productos select new { p.Nombre, p.Cantidad, p.StockMax };
-            Console.WriteLine("Productos a Comprar: ");
+            Console.WriteLine("╔═══════════════════════════════════════════╗");
+            Console.WriteLine("║            Productos a Comprar            ║");
+            Console.WriteLine("╠═══════════════════════════════════════════╣");
             foreach (var item in producto)
             {
-                Console.WriteLine($" Producto:{item.Nombre} -- Cantidad:{item.StockMax - item.Cantidad}");
+                Console.WriteLine($"║ Producto:{item.Nombre} -- Cantidad:{item.StockMax - item.Cantidad}   ║");
             }
+            Console.WriteLine("╚═══════════════════════════════════════════╝");
         }
     }
 
@@ -60,7 +67,13 @@ public class Querys
             Console.WriteLine("No hay facturas del mes de enero");
         else
         {
-            facturas.ForEach(f => Console.WriteLine($"NumFactura:{f.NroFactura} -- Fecha:{f.Fecha} -- IdCliente:{f.IdCliente}"));
+            Console.WriteLine("╔═════════════════════════════════════════════════╗");
+            Console.WriteLine("║                      Facturas                   ║");
+            Console.WriteLine("╠═════════════════════════════════════════════════╣");
+            facturas.ForEach(f => Console.WriteLine($"║NumFactura:{f.NroFactura} -- Fecha:{f.Fecha} -- IdCliente:{f.IdCliente}  ║"));
+            Console.WriteLine("╠═════════════════════════════════════════════════╣");
+            Console.WriteLine($"║Total Facturas: {facturas.Count()}                                ║");
+            Console.WriteLine("╚═════════════════════════════════════════════════╝");
         }
     }
 
@@ -81,13 +94,17 @@ public class Querys
                 {
                     nombre = p.Nombre
                 }).ToList();
-            resul.ForEach(p => Console.Write($"Producto: {p.nombre} \n"));
+            Console.WriteLine("╔═════════════════════════════════════════╗");
+            Console.WriteLine("║               Productos                 ║");
+            Console.WriteLine("╠═════════════════════════════════════════╣");
+            resul.ForEach(p => Console.WriteLine($"║- {p.nombre}".PadRight(30)+"║".PadLeft(13)));
+            Console.WriteLine("╚═════════════════════════════════════════╝");
+            
         }
     }
 
     public double Inventario()
     {
-        Console.Clear();
         var total = (from s in _productos select new { s.PrecioUnt, s.Cantidad }).ToList();
         double contTotal = 0;
         foreach (var item in total)
