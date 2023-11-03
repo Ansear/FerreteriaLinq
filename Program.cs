@@ -32,7 +32,7 @@ internal class Program
             {
                 case "1":
                     Console.Clear();
-                    Console.WriteLine($"Cantidad de productos en Inventario: {querys.Count()}");
+                    querys.Count();
                     break;
                 case "2":
                     Console.Clear();

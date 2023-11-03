@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\corvus\\.nuget\\packages\\": {}
+    "C:\\Users\\APM02-40\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\corvus\\Documents\\SebastianA\\FerreteriaLinq\\Ferreteria.csproj",
+      "projectUniqueName": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
       "projectName": "Ferreteria",
-      "projectPath": "C:\\Users\\corvus\\Documents\\SebastianA\\FerreteriaLinq\\Ferreteria.csproj",
-      "packagesPath": "C:\\Users\\corvus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\corvus\\Documents\\SebastianA\\FerreteriaLinq\\obj\\",
+      "projectPath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
+      "packagesPath": "C:\\Users\\APM02-40\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\corvus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\APM02-40\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
