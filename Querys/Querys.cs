@@ -27,7 +27,9 @@ public class Querys
             new DetalleFactura(){Id=1,NroFactura=1,IdProd=1,Cantidad=20,Valor=22},
             new DetalleFactura(){Id=2,NroFactura=1,IdProd=3,Cantidad=8,Valor=22},
             new DetalleFactura(){Id=3,NroFactura=1,IdProd=4,Cantidad=20,Valor=22},
-            new DetalleFactura(){Id=4,NroFactura=3,IdProd=1,Cantidad=5,Valor=22}
+            new DetalleFactura(){Id=4,NroFactura=3,IdProd=5,Cantidad=5,Valor=22},
+            new DetalleFactura(){Id=4,NroFactura=4,IdProd=2,Cantidad=5,Valor=22},
+            new DetalleFactura(){Id=4,NroFactura=2,IdProd=6,Cantidad=5,Valor=22},
         };
     List<Cliente> _cliente = new List<Cliente>(){
             new Cliente(){Id = 1,Nombre = "Sebastian",Email="sebas@fmil.com"},
@@ -83,15 +85,14 @@ public class Querys
     public void ProductosFactura(int NumFactura)
     {
         Console.Clear();
-        var num = _detalleFactura.Where(df => df.NroFactura == NumFactura);
-        if (num.Count() < 1)
-        {
+        var factu = _factura.Where(f => f.NroFactura == NumFactura);
+        if (factu.Count() < 1)
             Console.WriteLine("No hay Facturas con ese numero");
-        }
         else
         {
+            List<DetalleFactura> detaF = _detalleFactura.Where(df => df.NroFactura == NumFactura).ToList();
             var resul = _productos.Join(
-                num,
+                detaF,
                 p => p.Id,
                 df => df.IdProd,
                 (p, df) => new
@@ -105,11 +106,11 @@ public class Querys
     public double Inventario()
     {
         Console.Clear();
-        var total =( from s in _productos select new {s.PrecioUnt, s.Cantidad}).ToList();
+        var total = (from s in _productos select new { s.PrecioUnt, s.Cantidad }).ToList();
         double contTotal = 0;
         foreach (var item in total)
         {
-            contTotal += item.PrecioUnt*item.Cantidad;
+            contTotal += item.PrecioUnt * item.Cantidad;
         }
         return contTotal;
     }

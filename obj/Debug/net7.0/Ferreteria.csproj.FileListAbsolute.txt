@@ -26,3 +26,17 @@ C:\Users\sebas\Documents\Programacion\Campus\DotNet\Proyectos\FerreteriaLinq\obj
 C:\Users\sebas\Documents\Programacion\Campus\DotNet\Proyectos\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.pdb
 C:\Users\sebas\Documents\Programacion\Campus\DotNet\Proyectos\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.genruntimeconfig.cache
 C:\Users\sebas\Documents\Programacion\Campus\DotNet\Proyectos\FerreteriaLinq\obj\Debug\net7.0\ref\Ferreteria.dll
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\bin\Debug\net7.0\Ferreteria.exe
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\bin\Debug\net7.0\Ferreteria.deps.json
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\bin\Debug\net7.0\Ferreteria.runtimeconfig.json
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\bin\Debug\net7.0\Ferreteria.dll
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\bin\Debug\net7.0\Ferreteria.pdb
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.AssemblyInfoInputs.cache
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.AssemblyInfo.cs
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.csproj.CoreCompileInputs.cache
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.dll
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\refint\Ferreteria.dll
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.pdb
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\Ferreteria.genruntimeconfig.cache
+C:\Users\corvus\Documents\SebastianA\FerreteriaLinq\obj\Debug\net7.0\ref\Ferreteria.dll

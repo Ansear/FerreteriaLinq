@@ -6,30 +6,24 @@ internal class Program
     {
         Querys querys = new Querys();
         Console.BackgroundColor = ConsoleColor.Black;
-        Console.ForegroundColor = ConsoleColor.Magenta;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Clear();
 
         while (true)
         {
             Console.Clear();
 
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| "+ "              Menú Principal".PadLeft(35) + "                       |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 1.".PadRight(3) + " Listar los productos del inventario                     |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 2.".PadRight(3) + " Listar los productos a punto de agotarse                |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 3.".PadRight(3) + " Listar los productos a comprar y cantidad a comprar     |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 4.".PadRight(3) + " Listar el total de facturas de enero de 2023            |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 5.".PadRight(3) + " Listar los productos vendidos en una factura específica |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 6.".PadRight(3) + " Calcular el valor total del inventario                  |");
-            Console.WriteLine("+-----------------------------------------------------------+");
-            Console.WriteLine("| 7.".PadRight(3) + " Salir                                                   |");
-            Console.WriteLine("+-----------------------------------------------------------+");
+            Console.WriteLine("╔════════════════════════════════════════════════╗");
+            Console.WriteLine("║                Menú Principal                  ║");
+            Console.WriteLine("╠════════════════════════════════════════════════╣");
+            Console.WriteLine("║ 1. Productos del inventario                    ║");
+            Console.WriteLine("║ 2. Productos a punto de agotarse               ║");
+            Console.WriteLine("║ 3. Productos a comprar y cantidad a comprar    ║");
+            Console.WriteLine("║ 4. Total de facturas de enero de 2023          ║");
+            Console.WriteLine("║ 5. Productos vendidos en una factura específica║");
+            Console.WriteLine("║ 6. Calcular el valor total del inventario      ║");
+            Console.WriteLine("║ 7. Salir                                       ║");
+            Console.WriteLine("╚════════════════════════════════════════════════╝");
 
             Console.Write("Por favor, elija una opción: ");
             string opcion = Console.ReadLine();
