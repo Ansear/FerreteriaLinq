@@ -9,7 +9,7 @@ namespace Ferreteria.Querys;
 public class Querys
 {
     List<Productos> _productos = new List<Productos>(){
-            new Productos(){Id = 1,Nombre = "Tuerca Exagonal",PrecioUnt=2.23, Cantidad=50, StockMin=5, StockMax=100},
+            new Productos(){Id = 1,Nombre = "Tuerca Exagonal",PrecioUnt=2.23, Cantidad=3, StockMin=5, StockMax=100},
             new Productos(){Id = 2,Nombre = "Tornillo",PrecioUnt=1.10,Cantidad=800, StockMin=50, StockMax=2000},
             new Productos(){Id = 3,Nombre = "Taladro",PrecioUnt=50,Cantidad=20, StockMin=5, StockMax=30},
             new Productos(){Id = 4,Nombre = "Broca 3/4",PrecioUnt=2.30,Cantidad=100, StockMin=10, StockMax=380},
@@ -29,6 +29,11 @@ public class Querys
             new DetalleFactura(){Id=3,NroFactura=1,IdProd=4,Cantidad=20,Valor=22},
             new DetalleFactura(){Id=4,NroFactura=3,IdProd=1,Cantidad=5,Valor=22}
         };
+    List<Cliente> _cliente = new List<Cliente>(){
+            new Cliente(){Id = 1,Nombre = "Sebastian",Email="sebas@fmil.com"},
+            new Cliente(){Id = 2,Nombre = "Andres",Email="andres@fmil.com"},
+            new Cliente(){Id = 3,Nombre = "Santis",Email="santis@fmil.com"}
+        };
     public int Count()
     {
         int count = _productos.Count();
@@ -42,7 +47,7 @@ public class Querys
             Console.WriteLine("Todos los productos estan bien");
         else
         {
-            products.ForEach(p => Console.WriteLine(p));
+            products.ForEach(p => Console.WriteLine($"Producto: {p.Nombre}"));
         }
     }
 
@@ -97,7 +102,7 @@ public class Querys
         }
     }
 
-    public void Inventario()
+    public double Inventario()
     {
         Console.Clear();
         var total =( from s in _productos select new {s.PrecioUnt, s.Cantidad}).ToList();
@@ -106,7 +111,7 @@ public class Querys
         {
             contTotal += item.PrecioUnt*item.Cantidad;
         }
-        Console.WriteLine(contTotal);
+        return contTotal;
     }
 
 }
