@@ -97,4 +97,16 @@ public class Querys
         }
     }
 
+    public void Inventario()
+    {
+        Console.Clear();
+        var total =( from s in _productos select new {s.PrecioUnt, s.Cantidad}).ToList();
+        double contTotal = 0;
+        foreach (var item in total)
+        {
+            contTotal += item.PrecioUnt*item.Cantidad;
+        }
+        Console.WriteLine(contTotal);
+    }
+
 }

@@ -14,8 +14,10 @@ internal class Program
         
         //querys.Enero2023();//Facturas del mes de enero
         
-        Console.Write("Ingrese el numero de factura: ");
-        int num = Convert.ToInt32(Console.ReadLine());
-        querys.ProductosFactura(num);
+        // Console.Write("Ingrese el numero de factura: ");
+        // int num = Convert.ToInt32(Console.ReadLine());
+        // querys.ProductosFactura(num);
+
+        querys.Inventario();//Total inventario
     }
 }

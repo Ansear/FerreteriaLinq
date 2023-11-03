@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj": {}
+    "C:\\Users\\sebas\\Documents\\Programacion\\Campus\\DotNet\\Proyectos\\FerreteriaLinq\\Ferreteria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj": {
+    "C:\\Users\\sebas\\Documents\\Programacion\\Campus\\DotNet\\Proyectos\\FerreteriaLinq\\Ferreteria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
+        "projectUniqueName": "C:\\Users\\sebas\\Documents\\Programacion\\Campus\\DotNet\\Proyectos\\FerreteriaLinq\\Ferreteria.csproj",
         "projectName": "Ferreteria",
-        "projectPath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\Ferreteria.csproj",
-        "packagesPath": "C:\\Users\\APM02-40\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APM02-40\\Documents\\LINQ\\Ferreteria\\obj\\",
+        "projectPath": "C:\\Users\\sebas\\Documents\\Programacion\\Campus\\DotNet\\Proyectos\\FerreteriaLinq\\Ferreteria.csproj",
+        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sebas\\Documents\\Programacion\\Campus\\DotNet\\Proyectos\\FerreteriaLinq\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM02-40\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
